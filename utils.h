@@ -33,7 +33,6 @@ class Log {
 
     //Log generic
 
-
         template <typename T> 
             static inline void write (T arg)
             {
@@ -54,7 +53,7 @@ class Log {
             }
 
         template <typename T, typename T2 = T> 
-            static inline void logMulti (T argA, T2 argB = T2())
+            static inline void logPair (T argA, T2 argB = T2())
             {
              
                 std::time_t time_stamp = std::time(nullptr);
@@ -163,9 +162,6 @@ class Time {
           }).detach();     
       
       }
-
-        void Update();
-        void RunClock(int milliseconds);
 
     private:
 
