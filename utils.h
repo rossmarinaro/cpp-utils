@@ -12,9 +12,6 @@
 #include <thread>
 
 
-using namespace std::chrono_literals;
-
-
 namespace Utils {
 
 //logging
@@ -100,6 +97,7 @@ class Time {
 
         static inline void RunClock(int milliseconds)
         {
+            using namespace std::chrono_literals;
         
             const auto timer_duration = std::chrono::minutes(milliseconds); //90mins
         
